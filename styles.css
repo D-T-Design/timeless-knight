@@ -1,0 +1,89 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  width: 100%;
+}
+.playerInfo {
+  display: flex;
+}
+
+.show {
+  display: block !important;
+}
+.hide {
+  display: none;
+}
+
+#enemyHitBox {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+}
+
+.retreat-btn,
+.enemy_e,
+.campfire_e,
+.advance-btn,
+.next-btn,
+#enemyHitBox,
+.buy-regen-btn,
+.upgrade-regen-btn,
+.buy-midas-btn,
+.upgrade-midas-btn,
+.buy-aura-btn,
+.upgrade-aura-btn {
+  display: none;
+}
+.enemyHPBar,
+.playerHPBarBG {
+  width: 300px;
+  border: 1px solid lightgray;
+}
+
+.enemyHPBar > div,
+.playerHPBarBG > div {
+  background-color: green;
+  margin: 1px;
+  height: 25px;
+  transition: all 0.1s ease-in-out;
+}
+
+.enemies {
+  padding: 10px;
+}
+
+.gear {
+  display: flex;
+}
+
+.gear > div {
+  padding: 10px;
+}
+
+.gear button {
+  border: 0;
+  background-color: lightgray;
+  padding: 5px 10px;
+  outline: 0;
+  cursor: pointer;
+}
