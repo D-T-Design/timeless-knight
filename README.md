@@ -76,20 +76,20 @@ Implement game loop functionality, ignoring design completely.
 ## Screen Display
 The user interface should display the following:
 #### Display
-- Knight HP
-- Knight Damage per Swing
-- Knight Current/Max gold
-- Enemy HP
-- Current Wave Number
-- Monsters per Wave Progress
+- ~~Knight HP~~
+- ~~Knight Damage per Swing~~
+- ~~Knight Current/Max gold~~
+- ~~Enemy HP~~
+- ~~Current Wave Number~~
+- ~~Monsters per Wave Progress~~
 - Timeless Loop number (after first blade)
 #### Buttons
-- Retreat to Campfire
-- Return to Battle
-- Face Next Wave
-- Purchase Skill
+- ~~Retreat to Campfire~~
+- ~~Return to Battle~~
+- ~~Face Next Wave~~
+- ~~Purchase Skill~~
 - Upgrade Skill
-- Upgrade Gear
+- ~~Upgrade Gear~~
 #### Design
 - Layout & structure
 - Styles & effects
