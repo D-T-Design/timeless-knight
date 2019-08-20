@@ -90,6 +90,8 @@ The user interface should display the following:
 - ~~Purchase Skill~~
 - Upgrade Skill
 - ~~Upgrade Gear~~
+- Save Game
+- Loag Game
 #### Design
 - Layout & structure
 - Styles & effects

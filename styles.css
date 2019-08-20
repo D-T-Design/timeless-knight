@@ -27,7 +27,7 @@ h6 {
   display: none;
 }
 
-#enemyHitBox {
+#enemyHitbox {
   width: 100px;
   height: 50px;
   background-color: red;
@@ -45,7 +45,7 @@ h6 {
 .campfire_e,
 .advance-btn,
 .next-btn,
-#enemyHitBox,
+#enemyHitbox,
 .buy-regen-btn,
 .upgrade-regen-btn,
 .buy-midas-btn,
