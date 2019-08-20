@@ -15,14 +15,14 @@ Each monster killed grants the knight gold, gold is used to upgrade gear or to p
 
 ## Timeless Knight (Player)
 The player controls a nameless knight who wakes up confused, all they can remember is a burning desire to obtain the Timeless Blade.  Through the journey, the player can tap/click the screen to attack monsters, as well as upgrade their knight.
-- HP Bar, when HP hits 0, the wave is reset *(forshadowing that the player already has the Timeless Blade)*
-- Damage Per Swing, set at a certain amount, only improved by Gear upgrading
-- Bag of Gold, starts at 0, gain gold per monster.
+- **HP Bar**: When HP hits 0, the wave is reset
+- **Damage Per Swing**: Set at a certain amount, only improved by upgrading gear
+- **Bag of Gold**: Starts at 0, gain gold per monster
 
 ## Gear
 Gear slots are limited to:
-- Weapon (Upgrade to increase player damage per swing)
-- Armor (Upgrade to increase player max health)
+- **Weapon**: Upgrade to increase player damage per swing
+- **Armor**: Upgrade to increase player max health
 
 ## Skills
 Obtaining gold allows you to purchase up to 3 passive skills.  Passive skills have unique characteristics and will help the player knight on their journey.
@@ -32,9 +32,9 @@ Obtaining gold allows you to purchase up to 3 passive skills.  Passive skills ha
 
 ## Monsters
 Monsters in this game are tough!  The Timeless Knight will never reach wave 50 without upgrading gear and the help of skills, as the monsters are more powerful in each wave.  Monsters come in a small variety:
-- Minions: Does constant DPS to the Knight, relatively easy to kill, provides a small amount of gold on death
-- Elites: Does high DPS to the Knight, difficult to kill, provides a large amount of gold on death.
-- Boss: Timeless Blade wielder, does extra damage to the Knight, extremely difficult to kill, provides Timeless Blade buff and reset
+- **Minions**: Does constant DPS to the Knight, relatively easy to kill, provides a small amount of gold on death
+- **Elites**: Does high DPS to the Knight, difficult to kill, provides a large amount of gold on death.
+- **Boss**: Timeless Blade wielder, does extra damage to the Knight, extremely difficult to kill, provides Timeless Blade buff and reset
 
 ## Timeless Blade
 Obtaining the Timeless Blade resets your game and allows you to choose a bonus to restart with.
@@ -75,22 +75,30 @@ Implement game loop functionality, ignoring design completely.
 
 ## Screen Display
 The user interface should display the following:
-- Animation: A background animation to simulate moving to the right
-- Animation: A walking sprite of the Timeless Knight
-- Animation: A swinging sprite of the Timeless Knight
-- Animation: A slice animation on player click / tap
-- Animation: Enemy sprite (minion, elite, boss)
-- Animation: Party member sprites (Priest, Rogue, Mage)
-- Display: Knight HP
-- Display: Knight Damage per Swing
-- Display: Knight Current/Max gold
-- Display: Enemy HP
-- Display: Current Wave Number
-- Display: Monsters per Wave Progress
-- Display: Timeless Loop number (after first blade)
-- Button: Retreat to Campfire
-- Button: Return to Battle
-- Button: Face Next Wave
-- Button: Purchase Skill
-- Button: Upgrade Skill
-- Button: Upgrade Gear
+#### Display
+- Knight HP
+- Knight Damage per Swing
+- Knight Current/Max gold
+- Enemy HP
+- Current Wave Number
+- Monsters per Wave Progress
+- Timeless Loop number (after first blade)
+#### Buttons
+- Retreat to Campfire
+- Return to Battle
+- Face Next Wave
+- Purchase Skill
+- Upgrade Skill
+- Upgrade Gear
+#### Design
+- Layout & structure
+- Styles & effects
+- Transitions
+- Story
+#### Animation
+- A background animation to simulate moving to the right
+- A walking sprite of the Timeless Knight
+- A swinging sprite of the Timeless Knight
+- A slice animation on player click / tap
+- Enemy sprite (minion, elite, boss)
+- Buff sprites (regen, midas, aura)
