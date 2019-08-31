@@ -5,104 +5,151 @@
   </head>
   <link rel="stylesheet" href="styles.css" />
   <body>
-    <section>
-      <h1>Timeless Knight</h1>
-      <div class="container">
-        <h2>Wave Container</h2>
-        <div class="wave-info">
-          <small>Wave #: </small><span id="waveCounter"></span><br />
-          <small>Monster #: </small><span id="enemyCounter"></span>
+    <main>
+      <section class="header">
+        <div class="logo icon">
+          <h1><small class="small">Timeless</small><span>Knight</span></h1>
         </div>
-      </div>
-      <div class="container" id="player">
-        <h2>Player Status</h2>
-        <div class="player">
+        <div class="player-health">
           <div class="playerHPBarBG">
+            <label class="player-label">HP</label>
             <div id="playerHPBar"></div>
           </div>
-          <div class="playerStats">
-            <small>Player HP: </small><span id="playerCurrentHP"></span>/<span
-              id="playerMaxHP"
-            ></span
-            ><br />
-            <small>Gold: </small><span id="goldDisplay"></span><br />
-            <small>Attack Damage: </small><span id="weaponDMG"></span>
+        </div>
+        <div class="gold icon">
+          <div class="gold-text">
+            <label class="small">Gold</label>
+            <span id="goldDisplay"></span>
           </div>
-          <button type="button" class="retreat-btn" id="retreat">Retreat</button>
-          <button type="button" class="advance-btn show" id="advance">Advance</button>
-          <button type="button" class="next-btn" id="next">Next Wave</button>
+        </div>
+      </section>
+      <section class="content">
+        <section class="col">
+          <div class="waves">
+            <div class="wave-info icon">
+              <div class="wave-text">
+                <label class="small">Wave</label><span id="waveCounter"></span>
+              </div>
+            </div>
+            <div class="monster-info icon">
+              <div class="monster-text">
+                <label class="small">Monster</label><span id="enemyCounter"></span>
+              </div>
+            </div>
+          </div>
+          <section class="rest content-box">
+            <section class="rest-title icon">
+              <small class="small">Rest</small>
+            </section>
+            <section class="buttons">
+              <button type="button" class="rest-button" id="save">
+                <small class="small">Save</small>Game
+              </button>
+              <button type="button" class="rest-button show" id="load">
+                <small class="small">Load</small>Game
+              </button>
+              <button type="button" class="rest-button" id="retreat">
+                <small class="small">Return</small>To Campfire
+              </button>
+              <button type="button" class="rest-button show" id="lastwave">
+                <small class="small">Last</small>Wave
+              </button>
+              <button type="button" class="rest-button" id="advance">
+                <small class="small">Return</small>To Battle
+              </button>
+              <button type="button" class="rest-button show" id="next">
+                <small class="small">Next</small>Wave
+              </button>
+            </section>
+          </section>
           <div class="message" id="playerMessage"></div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container enemy_e" id="enemy">
-        <h2>Enemy Information</h2>
-        <div class="enemies">
-          <div class="enemyHPBar">
-            <div id="enemyCurrentHP"></div>
-          </div>
-          <div class="enemyStats">
-            <strong>Enemy Stats</strong><br />
-            <small>HP: </small><span id="enemyHPText"></span>/<span id="enemyMaxHPText"></span
-            ><br />
-            <small>Classification: </small><span id="enemyClass"></span><br />
-            <small>Gold Dropped: </small><span id="enemyGold"></span><br />
-            <small>Attack Damage: </small><span id="enemyDamage"></span>
-          </div>
-        </div>
-      </div>
-      <div class="container campfire_e show" id="campfire">
-        <h2>Campfire</h2>
-        <div class="gear">
-          <div class="gearStats">
-            Weapon Level: <span id="weaponLvl"></span><br />
-            <button type="button" id="weaponUpgrade">
-              Upgrade Weapon: <span id="weaponCost"></span>g
-            </button>
-          </div>
-          <div class="armorStats">
-            Armor Level: <span id="armorLvl"></span><br />
-            <button type="button" id="armorUpgrade">
-              Upgrade Armor <span id="armorCost"></span>g
-            </button>
-          </div>
-          <div class="skillsDisplay">
-            <h3>Passive Skills</h3>
-            <div class="skillUpgrades">
-              <button type="button" class="buy-regen-btn show" id="buyRegenBtn">
-                Purchase Regen (+<span id="regen"></span>hps) - <span id="regenCost"></span>g
-              </button>
-              <button type="button" class="upgrade-regen-btn" id="upgradeRegenBtn">
-                Upgrade Regen (+<span id="regenBonus"></span>hps) -
-                <span id="regenUpgradeCost"></span>g
-              </button>
-            </div>
-            <div class="skillUpgrades">
-              <button type="button" class="buy-midas-btn show" id="buyMidasBtn">
-                Purchase Midas (+<span id="midas"></span>gps) - <span id="midasCost"></span>g
-              </button>
-              <button type="button" class="upgrade-midas-btn" id="upgradeMidasBtn">
-                Upgrade Midas (+<span id="midasBonus"></span>hps) -
-                <span id="midasUpgradeCost"></span>g
-              </button>
-            </div>
-            <div class="skillUpgrades">
-              <button type="button" class="buy-aura-btn show" id="buyAuraBtn">
-                Purchase Aura (+<span id="aura"></span>dps) - <span id="auraCost"></span>g
-              </button>
-              <button type="button" class="upgrade-aura-btn" id="upgradeAuraBtn">
-                Upgrade Aura (+<span id="auraBonus"></span>hps) -
-                <span id="auraUpgradeCost"></span>g
-              </button>
+          <div class="container campfire_e show" id="campfire">
+            <h2>Campfire</h2>
+            <div class="gear">
+              <div class="gearStats">
+                Weapon Level: <span id="weaponLvl"></span><br />
+                <button type="button" id="weaponUpgrade">
+                  Upgrade Weapon: <span id="weaponCost"></span>g
+                </button>
+              </div>
+              <div class="armorStats">
+                Armor Level: <span id="armorLvl"></span><br />
+                <button type="button" id="armorUpgrade">
+                  Upgrade Armor <span id="armorCost"></span>g
+                </button>
+              </div>
+              <div class="skillsDisplay">
+                <h3>Passive Skills</h3>
+                <div class="skillUpgrades">
+                  <button type="button" class="buy-regen-btn show" id="buyRegenBtn">
+                    Purchase Regen (+<span id="regen"></span>hps) - <span id="regenCost"></span>g
+                  </button>
+                  <button type="button" class="upgrade-regen-btn" id="upgradeRegenBtn">
+                    Upgrade Regen (+<span id="regenBonus"></span>hps) -
+                    <span id="regenUpgradeCost"></span>g
+                  </button>
+                </div>
+                <div class="skillUpgrades">
+                  <button type="button" class="buy-midas-btn show" id="buyMidasBtn">
+                    Purchase Midas (+<span id="midas"></span>gps) - <span id="midasCost"></span>g
+                  </button>
+                  <button type="button" class="upgrade-midas-btn" id="upgradeMidasBtn">
+                    Upgrade Midas (+<span id="midasBonus"></span>hps) -
+                    <span id="midasUpgradeCost"></span>g
+                  </button>
+                </div>
+                <div class="skillUpgrades">
+                  <button type="button" class="buy-aura-btn show" id="buyAuraBtn">
+                    Purchase Aura (+<span id="aura"></span>dps) - <span id="auraCost"></span>g
+                  </button>
+                  <button type="button" class="upgrade-aura-btn" id="upgradeAuraBtn">
+                    Upgrade Aura (+<span id="auraBonus"></span>hps) -
+                    <span id="auraUpgradeCost"></span>g
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <button type="button" class="enemy-hit-box" id="enemyHitbox">Enemy Hit Box</button>
-    </section>
+        </section>
+        <section class="col">
+          <div class="feed">
+            Attack feed.
+          </div>
+        </section>
+        <section class="col">
+          <div class="container enemy_e" id="enemy">
+            <h2>Enemy Information</h2>
+            <div class="enemies">
+              <div class="enemyHPBar">
+                <div id="enemyCurrentHP"></div>
+              </div>
+              <div class="enemyStats">
+                <strong>Enemy Stats</strong><br />
+                <small>HP: </small><span id="enemyHPText"></span>/<span id="enemyMaxHPText"></span
+                ><br />
+                <small>Classification: </small><span id="enemyClass"></span><br />
+                <small>Gold Dropped: </small><span id="enemyGold"></span><br />
+                <small>Attack Damage: </small><span id="enemyDamage"></span>
+              </div>
+            </div>
+          </div>
+          <section class="stats">
+            <div class="playerStats">
+              <small>Player HP: </small><span id="playerCurrentHP"></span>/<span
+                id="playerMaxHP"
+              ></span
+              ><br />
+              <small>Attack Damage: </small><span id="weaponDMG"></span>
+            </div>
+            <button type="button" class="enemy-hit-box" id="enemyHitbox">Enemy Hit Box</button>
+            <img src="src/heart.svg" width="40" height="40" />
+            <img src="src/coins.svg" width="40" height="40" />
+            <img src="src/skull.svg" width="40" height="40" />
+          </section>
+        </section>
+      </section>
+    </main>
+
     <script src="game.js"></script>
   </body>
 </html>
